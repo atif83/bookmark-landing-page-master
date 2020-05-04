@@ -23,7 +23,7 @@ body{
 }
 h1,h2,h3,h4,a{
 	color: var(--Very-Dark-Blue);
-	margin: 0 auto;
+	margin: 10px auto;
 
 
 }
@@ -83,6 +83,7 @@ header img{
 	height: auto;
 
  }
+ 
 nav ul li{
 	margin:0 20px;
  font-weight: 400;
@@ -96,7 +97,19 @@ nav ul li a:hover{
 	color: var(--Soft-Red);
 	text-decoration: none;
 }
-.btn1{
+.btn1 {
+	border:2px solid var(--Soft-Red) ;
+ 	background: var(--Soft-Red);
+	color: white;
+	
+	padding: .2rem 30px ;
+ 
+	border-radius: 5px;
+}.btn1:hover{
+	background: white;
+	color: var(--Soft-Red);
+}
+ .btn3{
 	border:2px solid var(--Soft-Red) ;
  	background: var(--Soft-Red);
 	color: white;
@@ -107,7 +120,7 @@ nav ul li a:hover{
 	border-radius: 5px;
 }
 
-.btn1:hover{
+.btn3:hover{
 	background: white;
 	color: var(--Soft-Red);
 }
@@ -136,14 +149,20 @@ header>div{
 }
  
 
-.container::after {
+.container1{
+	position: relative;
+}
+.container1::after {
     content: "";
     width: 40%;
-    height: 40%;
+    height: 250px;
+
     background-color:var(--Soft-Blue);
     position: absolute;
-    bottom:120px;
-    right: 0;
+    bottom:  -40px;
+  
+ 
+    right:  -50px;
     z-index: -1;
     border-radius: 0 0 0 165px;
 }
@@ -152,8 +171,7 @@ header>div{
 }
 .tab-imag{
  	margin:30px auto ;
-	padding: 30px auto;
-	 width: 100%;
+	  width: 100%;
 }
 .tab-txt{
 display: flex;
@@ -408,16 +426,28 @@ margin:0 auto;
 	flex: 1;
 	flex: 0 1 auto;
 }
-.container::after{
+.container1::after{
 content: '';
- width: 0;
- height: 0;
+ width: 400px;
+ height: 200px;
+ bottom:  55%;
+  
+ 
+    right:  0;
+
  }
- .tab-imag::after {
-    content: '';
-    width: 0;
-    height: 0;
-}
+  .tab-img::after{
+  	content: "";
+    width: 25%;
+    height: 25%;
+    background-color: var(--Soft-Blue);
+    position: absolute;
+    /* bottom: 40px; */
+    top: 250px;
+    left: -20px;
+    border-radius: 0px 0 160px 0;
+    z-index: -1;
+  }
 	footer{
 	flex-direction: column;
 	align-items: center;
@@ -494,19 +524,27 @@ nav ul.show1 li a {
 	letter-spacing: 2px;
 	padding: 8px 16px;
 	   background: transparent;
-width: 100%;
+width: 300px;
 text-decoration: none;
 
 }
+
 nav ul.show1 li a:hover{
  
 		 transition: all 0.3s ease 0s;
 		 
 }
-nav ul.show1 li a:lastchid{
+   .btn1{
+background: transparent;
+color: white;
+padding: 8px 16px;
+	border-spacing: 2px;
 	border: 2px solid white;
-	padding: 8px 16px;
-}
+   	}
+   	.btn1:hover{
+   border: 2px solid var(--Grayish-Blue);
+ 
+   }
  .btn2{
  	background: transparent;
  	border: 2px solid var(--Grayish-Blue);
@@ -520,5 +558,7 @@ nav ul.show1 li a:lastchid{
 	align-self: flex-end;
 	 
  }
-
+h2{
+	font-size: 24px;
+}
 }
